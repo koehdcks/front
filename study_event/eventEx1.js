@@ -1,10 +1,17 @@
 const cb=document.getElementsByClassName("cb");
 const btn=document.getElementById("btn");
 
-for(let i=0;i<cb.length;i++){
-    
+
+if(cb[0].checked){
+    for(let i=1;i<cb.length;i++){
+        cb[i].checked=true;
+    }
 }
 
-btn.addEventListener("click",function(){
-    
+cb[0].addEventListener("change",function(){
+    if(cb[0].checked){
+        for(let i=1;i<cb.length;i++){
+            cb[i].checked=true;
+        }
+    }
 });
