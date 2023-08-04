@@ -3,6 +3,12 @@ const btn = document.getElementById("btn");
 const h1s = document.getElementsByTagName("h1");
 const btn2 = document.getElementById("btn2");
 const u1 = document.getElementById("u1");
+const del = document.getElementById("del");
+
+del.addEventListener("click",function(){
+    // d1.remove();
+    d1.removeChild(h1s);
+});
 
 btn2.addEventListener("click",function(){
     let li = document.createElement("li");
